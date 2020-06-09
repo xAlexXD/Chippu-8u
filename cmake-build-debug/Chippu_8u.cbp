@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Chippu_8u"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\calc\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Chippu_8u">
+				<Option output="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Chippu_8u" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCALC_LIB_VERSION=3"/>
+					<Add option="-DCALC_LIB_PREPROCESSOR_WORKING=1"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/includes"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 Chippu_8u"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Chippu_8u/fast">
+				<Option output="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Chippu_8u" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCALC_LIB_VERSION=3"/>
+					<Add option="-DCALC_LIB_PREPROCESSOR_WORKING=1"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/includes"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 Chippu_8u/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calc_lib">
+				<Option output="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/libcalc_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCALC_LIB_VERSION=3"/>
+					<Add option="-DCALC_LIB_PREPROCESSOR_WORKING=1"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/includes"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 calc_lib"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calc_lib/fast">
+				<Option output="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/libcalc_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCALC_LIB_VERSION=3"/>
+					<Add option="-DCALC_LIB_PREPROCESSOR_WORKING=1"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/includes"/>
+					<Add directory="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 calc_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/xelarse/Documents/Repos/Chippu-8u/cmake-build-debug/lib/calc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/src/calc/calc.cpp">
+			<Option target="calc_lib"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/src/calc/calc.h">
+			<Option target="calc_lib"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/main.cpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/lib/calc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\calc\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
