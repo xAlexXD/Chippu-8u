@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(includes)
 
 #   Setting up a library to link into our executable
-message(STATUS "####        Adding Static libs subdir       ####")
-add_subdirectory(lib)
+#message(STATUS "####        Adding Static libs subdir       ####")
+#add_subdirectory(lib)
 
 message(STATUS "####        Building project executable     ####")
 #   Sets up the main app instance with all the source files to be included
@@ -19,8 +19,8 @@ add_executable(Chippu_8u
         )
 
 #   Linking the lib to the executable. Notice how the source files aren't in exe but can still be used
-message(STATUS "####        Linking libs                    ####")
-target_link_libraries(Chippu_8u PRIVATE calc_lib)
+#message(STATUS "####        Linking libs                    ####")
+#target_link_libraries(Chippu_8u PRIVATE calc_lib)
 
 
 
