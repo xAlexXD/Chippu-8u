@@ -16,6 +16,10 @@ using opcode = unsigned short;		// opcodes are 2 bytes long, shorts are 16 bits
 		0x200-0xFFF - Program ROM and work RAM - 512 - 4096
 */
 
+
+// INFO ACCESSED AT - https://en.wikipedia.org/wiki/CHIP-8#Virtual_machine_description
+// TUT AT - http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter//
+
 class ChipCPU
 {
 public:
@@ -44,6 +48,16 @@ public:
 	void setKeys();
 
 private:
+
+	// Gets the current opcode based on the program counter
+	opcode fetchOpcode(const unsigned short _pc);
+
+	// Takes the inputted opcode and runs the appropriate logic for it
+	void decodeAndExecuteOpcode(const opcode& _code);
+
+	void opcodeGroup8XYN(const opcode& _code);
+	void opcodeGroupFXNN(const opcode& _code);
+	void opcodeGroupEXNN(const opcode& _code);
 
 	//Chip 8 has 4k memory in total
 	std::array<byte, 4096> memory = {};

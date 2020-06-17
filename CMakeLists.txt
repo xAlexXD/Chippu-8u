@@ -15,7 +15,13 @@ message(STATUS "####        Building project executable     ####")
 #   differing source files would be good for different OS' as they could all use the same includes
 #   but different source defs
 add_executable(Chippu_8u
-        main.cpp
+			   includes/ChipCPU.hpp
+			   source/ChipCPU.cpp
+			   includes/Gfx.hpp
+			   source/Gfx.cpp
+			   includes/Input.hpp
+			   source/Input.cpp
+			   main.cpp
         )
 
 #   Linking the lib to the executable. Notice how the source files aren't in exe but can still be used

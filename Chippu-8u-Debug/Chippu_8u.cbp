@@ -84,7 +84,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/includes/ChipCPU.hpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/includes/Gfx.hpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/includes/Input.hpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
 		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/main.cpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/source/ChipCPU.cpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/source/Gfx.cpp">
+			<Option target="Chippu_8u"/>
+		</Unit>
+		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/source/Input.cpp">
 			<Option target="Chippu_8u"/>
 		</Unit>
 		<Unit filename="/home/xelarse/Documents/Repos/Chippu-8u/CMakeLists.txt">
