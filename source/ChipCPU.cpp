@@ -172,7 +172,38 @@ void ChipCPU::opcodeGroup8XYN(const opcode& _code)
 
 void ChipCPU::opcodeGroupFXNN(const opcode& _code)
 {
+	// Operation is dependant on the final byte of the opcode
 
+	switch (_code & 0x00FF)
+	{
+		case 0x07:
+			// FX07 - TIMER - Vx = get_delay() - sets Vx to the value of the delay timer
+			break;
+		case 0x0A:
+			// FX0A - KEYOP - Vx = get_key() - A key press is awaited and then stored in Vx. (Blocking Operation, all instructions halted until the next key event)
+			break;
+		case 0x15:
+			// FX15 - TIMER - delay_timer(Vx) - Sets the delay timer to Vx
+			break;
+		case 0x18:
+			// FX18 - SOUND - sound_timer(Vx) - Set the sound timer to Vx
+			break;
+		case 0x1E:
+			// FX1E - MEM - I += Vx - Adds Vx to I. VF is not affected.
+			break;
+		case 0x29:
+			// FX29 - MEM - I = sprite_addr[Vx] - Sets I to the location of the sprite for the characters in Vx. Characters 0-F in hex are represented by a 4x5 font
+			break;
+		case 0x33:
+			// FX33 - BCD - set_BCD(Vx); *(I+0) = BCD(3); *(I+1) = BCD(2); *(I+2) = BCD(1); - This is long, look it up
+			break;
+		case 0x55:
+			// FX55 - MEM - reg_dump(Vx, &I) - Stores V0 to Vx (including Vx) in memory starting at address I. The offset from I is increased by 1 for each value written, but I itself is left unmodified.
+			break;
+		case 0x65:
+			// FX65 - MEM - reg_load(Vx, &I) - Fills V0 to Vx (including Vx) with values from memory starting at address I. The offset from I is increased by 1 for each value written, but I itself is left unmodified
+			break;
+	}
 }
 
 void ChipCPU::opcodeGroupEXNN(const opcode& _code)
