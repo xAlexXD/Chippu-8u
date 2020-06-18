@@ -7,16 +7,47 @@
 void ChipCPU::init()
 {
 	//Init registers and mem once
+
+	pc = 0x200;			//Program counter starts at 0x200 as the memory prior is used by the system
+	I = 0;				//Resets index register
+	stackPtr = 0;		//Resets stack ptr
+
+	gfx.fill(0);		//Resets the display
+	stack.fill(0);	//Resets the stack
+	V.fill(0);		//Resets the V0 - VF registers
+	memory.fill(0);	//Resets the memory
+
+	// Load fontset
+	for (int i = 0; i < 80; ++i)
+	{
+		memory.at(i) = fontset.at(i);
+	}
+
+	// Reset timers - Do these go like high or zero?
+
 }
 
 bool ChipCPU::isValidGame(const char* filepath)
 {
+	// Load in game into a byte buffer
+
+	// if byte buffer is larger than the memory buffer size MINUS 512 aka 0x200 then return false
+	// else return true
+	// This is to ensure the game fits into the cpu memory; the first 512 bytes of the memory buffer are used by system as the pc starts at 0x200
 	return false;
 }
 
 bool ChipCPU::loadGame(const char* filepath)
 {
-	return false;
+	// Load the game into a byte buffer
+	std::array<byte, 4096 - 512> gameData = {};	//Load it here
+
+	// Take the contents of the buffer and store it in the cpus memory. Starts at 0x200 aka 512 into the memory due to everything prior being reserved for system
+	for (int i = 0; i < gameData.size(); ++i)
+	{
+		memory.at(i + 512) = gameData.at(i);
+	}
+	return true;
 }
 
 bool ChipCPU::isRunning()
@@ -34,6 +65,19 @@ void ChipCPU::tick()
 	decodeAndExecuteOpcode(ticksOpcode);
 
 	//Update Timers
+	if(delayTimer > 0)
+	{
+		--delayTimer;
+	}
+
+	if(soundTimer > 0)
+	{
+		if(soundTimer == 1)
+		{
+			//Play beep sound
+		}
+		--soundTimer;
+	}
 }
 
 bool ChipCPU::shouldDraw()
