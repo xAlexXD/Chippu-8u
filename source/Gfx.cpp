@@ -3,3 +3,18 @@
 //
 
 #include "Gfx.hpp"
+
+void Gfx::init()
+{
+
+}
+
+bool Gfx::isRunning()
+{
+	return false;
+}
+
+void Gfx::draw()
+{
+
+}

@@ -9,6 +9,10 @@
 
 int main()
 {
+	std::cout << std::hex <<  (0x888A & 0xF000) << std::dec << std::endl;
+	return 0;
+
+
 	ChipCPU chipCpu = ChipCPU();
 	Gfx gfx = Gfx();
 	Input input = Input();

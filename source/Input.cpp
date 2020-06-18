@@ -4,3 +4,8 @@
 
 
 #include "Input.hpp"
+
+void Input::init()
+{
+
+}

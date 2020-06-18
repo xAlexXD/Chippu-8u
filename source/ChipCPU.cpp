@@ -136,7 +136,38 @@ void ChipCPU::decodeAndExecuteOpcode(const opcode& _code)
 
 void ChipCPU::opcodeGroup8XYN(const opcode& _code)
 {
+	// All 8 codes do something different depending on the last nibble / the N
 
+	switch (_code & 0x000F)
+	{
+		case 0x0:
+			// 8XY0 - ASSIGN - Vx = Vy
+			break;
+		case 0x1:
+			// 8XY1 - BITOP - Vx = Vx | Vy - sets Vx to (Vx OR Vy)
+			break;
+		case 0x2:
+			// 8XY2 - BITOP - Vx = Vx & Vy - sets Vx to (Vx AND Vy)
+			break;
+		case 0x3:
+			// 8XY3 - BITOP - Vx = Vx ^ Vy - sets Vx to (Vx XOR Vy)
+			break;
+		case 0x4:
+			// 8XY4 - MATH - Vx += Vy - Adds Vy to Vx. VF is set to 1 when theres a carry and 0 when there isnt
+			break;
+		case 0x5:
+			// 8XY5 - MATH - Vx -= Vy - Vy is subtracted from Vx. VF is set to 0 when there's a borrow and 1 when there isnt
+			break;
+		case 0x6:
+			// 8XY6 - BITOP - Vx >>= 1 - Stores the least significant bit of Vx in VF and then shifts Vx to the right by 1
+			break;
+		case 0x7:
+			// 8XY7 - MATH - Vx = Vy - Vx - Sets Vx to Vy minus Vx. VF is set to 0 when theres a borrow and 1 when there isnt
+			break;
+		case 0xE:
+			// 8XYE - BITOP - Vx <<= 1 - Stores the most significant bit of Vx in VF and then shifts Vx left by 1
+			break;
+	}
 }
 
 void ChipCPU::opcodeGroupFXNN(const opcode& _code)
@@ -146,5 +177,15 @@ void ChipCPU::opcodeGroupFXNN(const opcode& _code)
 
 void ChipCPU::opcodeGroupEXNN(const opcode& _code)
 {
+	// Operation is dependant on the final byte of the opcode
 
+	switch (_code & 0x00FF)
+	{
+		case 0x9E:
+			// EX9E - KEYOP - if(key() == Vx) - skips the next instruction if the key stored in Vx is pressed. usually next instruction is a jump to skip a code block
+			break;
+		case 0xA1:
+			// EXA1 - KEYOP - if(key() != Vx) - skips the next instruction if the key stored in Vx isnt pressed. usually next instruction is a jump to skip a code block
+			break;
+	}
 }
